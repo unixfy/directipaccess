@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Direct IP Access</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Droid+Sans+Mono');
+
+    body {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    #fullscreen {
+      display: none;
+    }
+
+    #bluescreen {
+      font-family: 'Droid Sans Mono', monospace;
+      width: 620px;
+      padding-top: 10px;
+      background: #010080;
+      color: white;
+      cursor: none;
+      font-size: 8px;
+      line-height: 17px;
+      padding-left: 15px;
+      padding-right: 15px;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+    }
+
+    #bluescreen p {
+      margin-bottom: 5px;
+    }
+
+     :-webkit-full-screen {
+      display: block !important;
+    }
+
+     :-moz-full-screen {
+      display: block !important;
+    }
+
+     :full-screen {
+      display: block !important;
+    }
+
+     :-moz-full-screen #bluescreen {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -320px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="alert alert-info">
+      <h1>OH SNAP!</h1>
+      <hr />
+      <p>
+        It looks like you're trying to access an X2C0 IP address directly. Unfortunately, direct IP access is not permitted.
+      </p>
+    </div><br /><br />
+  </DIV>
+  <div class="container">
+    <div class=row>
+      <div class=col-md-6>
+        <div class="panel panel-default">
+          <div class="panel-heading">WHAT HAPPENED?</div>
+          <div class="panel-body">You requested an IP that is part of <a href="https://x2c0.net">X2C0</a>'s network, which is not allowed. This means we can't show you the site or resources you were looking for. </div>
+        </div>
+      </div>
+      <div class=col-md-6>
+        <div class="panel panel-default">
+          <div class="panel-heading">WHAT CAN I DO?</div>
+          <div class="panel-body">It's likely you either committed a typo, or clicked the wrong link. You probably want to return to X2C0.net. If so, click <a href="https://x2c0.net">here</a>. </div>
+        </div>
+      </div>
+    </div><br /><br />
+    <div class=row>
+      <div class=col-md-7>
+        <div class="panel panel-default">
+          <div class="panel-heading">I NEED HELP!</div>
+          <div class="panel-body">If you are sick or hurt and need assistance, call your country's emergency services number instead of staring at this error page. If you need help with X2C0 services, visit <a href="https://x2c0.net">x2c0.net</a> and click on Contact.</div>
+        </div>
+      </div>
+      <div class=col-md-5>
+        <div class="panel panel-warning">
+          <div class="panel-heading">WHAT ELSE IS THERE HERE?</div>
+          <div class="panel-body">You can try clicking the button below and see what you get.</div>
+        </div>
+        <center><button type="button" class="btn btn-default" id="click" data-toggle="tooltip" data-placement="right" title="( ͡° ͜ʖ ͡°)" >Click Me</button></center>
+
+      </div>
+    </div>
+  </div>
+  <div id="fullscreen">
+    <div id="bluescreen">
+      <p>A problem has been detected and your browser has been put into fullscreen<br /> to prevent damage to your computer.</p>
+      <p><b>UNMOUNTABLE_BRAIN_UNIT</b></p>
+      <p>If this is the first time you've seen this stop error screen,<br /> restart your computer. If this screen appears again, follow these steps:</p>
+      <p>Check to make sure any new hardware or software is properly installed.<br /> If this is a new installation, ask your hardware or software manufacturer<br /> for any updates you might need.</p>
+      <p>If problems continue, disable or remove any newly installed hardware<br /> or software. Disable BIOS memory options such as caching or shadowing.<br /> If you need to use Safe Mode to remove or disable components, restart<br /> your computer, press
+        F8 to select Advanced Startup Options, and then <br />select Safe Mode.</p>
+      <p style="font-size:4px;">Or just press Esc.</sub>
+      </p>
+      <p>Technical information: <br /><br /> ***STOP: 0x00000054 (0x68697320, 0x00000069, 0x73206661, 0x00006B65)<br /></p>
+    </div>
+  </div>
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+
+  <script>
+    _386 = {
+      onePass: true,
+      speedFactor: 1.5
+    };
+    $(document).ready(function() {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+    var bluescreen = document.getElementById('bluescreen'),
+      // isInIFrame = (window.location != window.parent.location) ? true : false;
+      isInIFrame = window.location.href.indexOf('s.codepen.io/eky/fullpage/') >= 0 ? true : false;
+    fullscreen = document.getElementById('fullscreen'),
+      isFs = false,
+      notSupportFullscreenAPI = !fullscreen.webkitRequestFullScreen && !fullscreen.mozRequestFullScreen && !fullscreen.requestFullScreen;
+
+    // Outdated stuff
+    isInIFrame = false;
+
+    if (notSupportFullscreenAPI) {
+      document.getElementById('click').innerHTML = 'Your browser does not support full screen API.';
+      document.getElementById('owata').innerHTML = "／^o^＼";
+    } else if (isInIFrame) {
+      document.getElementById('click').innerHTML = 'Please view in <a href="https://codepen.io/eky/pen/xlwhH" target="_parent">editor page</a>.';
+      document.getElementById('owata').innerHTML = "／^o^＼";
+    } else {
+      var target = document.getElementById('click');
+      target.addEventListener("click", function(event) {
+        if (fullscreen.webkitRequestFullScreen)
+          fullscreen.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+        else if (fullscreen.mozRequestFullScreen)
+          fullscreen.mozRequestFullScreen();
+        else
+          fullscreen.requestFullScreen();
+      }, false);
+
+      var screenRatio = screen.width / screen.height;
+      bluescreen.style.height = 640 / screenRatio + 'px';
+      if (fullscreen.mozRequestFullScreen)
+        bluescreen.style.marginTop = '-' + (640 / screenRatio / 2) + 'px';
+      var widthRatio = screen.width / 640;
+      var heightRatio = screen.height / (480 / screenRatio);
+
+      var fsChange = function(event) {
+        if (!isFs) {
+          bluescreen.style.WebkitTransform = 'scale(' + widthRatio + ')';
+          bluescreen.style.MozTransform = 'scale(' + widthRatio + ')';
+          bluescreen.style.Transform = 'scale(' + widthRatio + ')';
+        }
+        isFs = isFs ? false : true;
+      };
+
+      fullscreen.onwebkitfullscreenchange = fsChange;
+      fullscreen.onmozfullscreenchange = fsChange;
+      fullscreen.onfullscreenchange = fsChange;
+    }
+  </script>
+</body>
+
+</html>
